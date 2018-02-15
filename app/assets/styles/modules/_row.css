@@ -1,6 +1,10 @@
 .row {
     
-   /*@mixin clearfix;*/
+   @mixin clearfix;
+    
+    &--t-padding {
+        padding-top: 80px;
+    }
     
     &--gutters {
         margin-right: -65px;
@@ -43,5 +47,19 @@
             float: left;
             width: 63%;
         }
+    }
+    
+    /* Begin Equal Hieght Rules */
+    
+        &--equal-height-at-medium {
+            @mixin atMedium {
+                display: flex;
+            }
+            
+            & > div {
+                float: none;
+                display: flex;
+            }
+        
     }
 }
